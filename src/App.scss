@@ -1,0 +1,112 @@
+
+
+// html,
+// body {
+//   height:100vh;
+//   margin: 0;
+// }
+
+// body {
+//   width:100%;
+// }
+
+// div{
+//   height: 100%;
+// }
+
+// .header {
+//   color: white;
+//   font-size: 50px;
+// }
+
+// .section {
+//   height: 50vh;
+//   background: #293744;
+//   color: #899eb5;
+// }
+
+// .scene {
+//   height: 100%;
+//   width: 100%;
+//   background: #EAEAEA;
+// }
+
+// .center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+// }
+
+
+// $frame-count: 9;
+// $offset-val: 100;
+
+// .viewer {
+//   // animation: drink-coffee 1s steps($frame-count) infinite;
+//   height: 100vh;
+//   margin-left: auto;
+//   margin-right: auto;
+//   max-width: 200px;
+//   width: 100%;
+//   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/doodle-sprite.png);
+//   background-repeat: no-repeat;
+//   background-position: 0 50%;
+// }
+
+// @for $i from 1 through $frame-count {
+//   .viewer.frame#{$i} {
+//     background-position: -(($i * $offset-val) * 2) + px 50%;
+//   }
+// }
+
+// @keyframes drink-coffee {
+//   to {
+//     background-position: -1800px 50%;
+//   }
+// }
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+body {
+overflow-x: hidden;
+overflow-y: scroll;
+}
+
+.viewport {
+overflow: hidden;
+position: fixed;
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+}
+
+.scroll-container {  
+position: absolute;  
+overflow: hidden;
+z-index: 10;
+display: flex;
+justify-content: center;  
+backface-visibility: hidden;
+transform-style: preserve-3d;
+}
+
+.content {
+width: 60%; 
+padding-top:50px;
+}
+
+.img-container {
+margin: 0 0 50px;
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+}
